@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#nav,
+#content,
+#supporting {
+    margin-top: 180px;
+}
+
+.container {
+    padding: 20px;
+}
+
+#banner {
+    width: 1200px;
+    background-color: black;
+    color: azure;
+    height: 180px;
+    clear: both;
+    position: fixed
+}
+
+#nav {
+    width: 200px;
+    background-color: rgba(241, 230, 195, 0.841);
+    color: rgb(61, 34, 2);
+    height: 600px;
+    /* float: left; >以設定position fixed 所以不需要這個*/
+    position: fixed
+}
+
+ul{
+    padding-left: 0;
+}
+li{
+    display:block;
+    /* display:block; 設定分頁按鈕高度，本來是文字多高就多高*/
+    height:40px ;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color:bisque;;
+}
+
+li:hover{
+    background-color:aliceblue;
+    /* background-color:aliceblue; li:gover如果滑鼠點到>就會變成什麼顏色*/
+}
+ul a{
+    text-decoration: none;
+    /* text-decoration: none;把連結底線拿掉 */
+    
+}
+
+#content {
+    width: 800px;
+    background-color: rgb(233, 214, 188);
+    color: rgb(61, 34, 2);
+    height: 300vf;
+    /* height: 200vf;意指兩個視窗高度高 */
+    margin-left: 200px;
+    float: left
+}
+
+#supporting {
+    width: 200px;
+    height: 600px;
+    background-color: rgba(241, 230, 195, 0.841);
+    color: rgb(61, 34, 2);
+    position: fixed;
+    margin-left: 1000px;
+}
+
+#footer {
+    width: 800px;
+    background-color: black;
+    color: azure;
+    height: 30px;
+    margin-top: 700px;
+    clear: both;
+    padding-top: -20px;
+    margin-left: 200px;
+    text-align: center; 
+    /* text-align: center; 確保了子元素在水平方向上居中 */
+}
+
+#About,
+#Family,
+#Work,
+#Stories {
+    padding-top: 180px;
+    margin-top: -180px;
+}
+
+#footer{padding: -10px;}
+
+
+/* 字型 */
+
+h1 {
+	font-family: 'CoreCircus', sans-serif;
+	text-transform: uppercase;
+	font-size: 5vw;
+	text-align: center;
+	line-height: 1;
+	margin: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	color: $color1;
+	text-shadow: 1px 0px 0px $color2,
+		0px 1px 0px $color2,
+		2px 1px 0px $color2,
+		1px 2px 0px $color2,
+		3px 2px 0px $color2,
+		2px 3px 0px $color2,
+		4px 3px 0px $color2,
+		3px 4px 0px $color2,
+		5px 4px 0px $color2,
+		4px 5px 0px $color2,
+		6px 5px 0px $color2,
+		5px 6px 0px $color2,
+		7px 6px 0px $color2,
+		6px 7px 0px $color2,
+		8px 7px 0px $color4,
+		7px 8px 0px $color4,
+		9px 8px 0px $color4,
+		8px 9px 0px $color4,
+		10px 9px 0px $color4,
+		9px 10px 0px $color4,
+		11px 10px 0px $color4,
+		10px 11px 0px $color4;
+	&:before,
+	&:after {
+		content: attr(data-heading);
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		top: 0;
+	}
+	&:before {
+		color: $color3;
+		width: 100%;
+		z-index: 5;
+		font-family: 'CoreCircus2DIn';
+		font-weight: normal;
+	}
+	&:after {
+		z-index: -1;
+		text-shadow: 
+			-1px -1px 0 $color3,
+			1px -1px 0 $color3, 
+			-1px 1px 0 $color3, 
+			1px 1px 0 $color3, 
+			-3px 3px 2px #6c9d9e, 
+			-5px 5px 2px #6c9d9e,
+			-7px 7px 2px #6c9d9e,
+			-8px 8px 2px #6c9d9e,
+			-9px 9px 2px #6c9d9e,
+			-11px 11px 2px #6c9d9e;
+	}
+}
+
+
+@font-face {
+	font-family: 'CoreCircus2DIn';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.eot');
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BFA_1_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CoreCircus';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot');
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype');
+}
+
+h2 {
+    transform: skew(#{$rotationAmt}deg) rotate(#{$rotationAmt}deg);
+    grid-area: text;
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 5vmin;
+    margin: 0;
+    padding: 30px;
+    color: #1d9099;
+    text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;
+  }
