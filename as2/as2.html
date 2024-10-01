@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment2-romantic</title> <!-- 網站標題改為 assignment2-romantic -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- 可愛字體 -->
+    <style>
+        body {
+            font-family: 'Pacifico', cursive; /* 使用可愛字體 */
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* 平滑滾動 */
+            background-color: #fef5e7; /* 淺粉色背景 */
+        }
+
+        /* 主Banner樣式 */
+        .banner {
+            background-color: rgba(0, 139, 139, 1); /* 藍綠色背景 */
+            color: white; /* 文字顏色 */
+            text-align: center; /* 文字置中 */
+            padding: 50px 0; /* 上下內邊距 */
+            font-size: 2.5em; /* 文字大小 */
+            position: fixed; /* 固定在上方 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            transition: top 0.5s ease; /* 滑動效果 */
+        }
+
+        /* 導覽列樣式 */
+        .navbar {
+            display: flex;
+            justify-content: flex-start; /* 左對齊 */
+            background-color: #f0f0f0; /* 淺灰色背景 */
+            padding: 10px; /* 導覽列內邊距 */
+            position: fixed; /* 固定在上方 */
+            top: 100px; /* 在主Banner下方 */
+            left: 0; /* 左側 */
+            width: 100%; /* 寬度100% */
+            z-index: 10; /* 提高層級 */
+            transition: top 0.5s ease; /* 滑動效果 */
+        }
+
+        .navbar a {
+            color: gray; /* 預設灰色字體 */
+            padding: 14px 20px; /* 內邊距 */
+            text-decoration: none; /* 去掉下劃線 */
+            font-size: 1em; /* 字體大小 */
+            margin-right: 10px; /* 每個項目之間的間距 */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd; /* 滑鼠懸停背景色 */
+            color: black; /* 滑鼠懸停文字顏色 */
+        }
+
+        /* 區段樣式 */
+        .section {
+            min-height: 100vh; /* 每個區段高度填滿視窗 */
+            padding: 50px 0; /* 區段內邊距 */
+        }
+
+        /* 區段Banner樣式 */
+        .section-banner {
+            height: 100vh; /* 滿頁高度 */
+            display: flex; /* 使用flex以便中央對齊內容 */
+            align-items: center; /* 垂直置中 */
+            justify-content: center; /* 水平置中 */
+            color: white; /* 文字顏色 */
+            font-size: 1.5em; /* 字體大小 */
+            background-color: #d3d3d3; /* 淺灰色背景 */
+            background-size: cover; /* 確保背景圖像覆蓋 */
+            background-position: center; /* 背景圖像置中 */
+        }
+
+        /* 區段內容樣式 */
+        .content {
+            background-color: #f0f0f0; /* 灰色背景 */
+            width: 600px; /* 寬度600px */
+            height: auto; /* 高度自動 */
+            margin: 20px auto; /* 上下邊距，自動水平置中 */
+            padding: 20px; /* 內容內邊距 */
+            border-radius: 5px; /* 圓角 */
+            text-align: left; /* 內容靠左 */
+        }
+
+        /* 區段之間的空白 */
+        .spacer {
+            height: 300px; /* 增加區段之間的空白 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        這是Banner
+    </div>
+
+    <div class="navbar">
+        <a href="#section1">首頁</a>
+        <a href="#section1">區段1</a>
+        <a href="#section2">區段2</a>
+        <a href="#section3">區段3</a>
+    </div>
+
+    <div id="section1" class="section">
+        <div class="section-banner">
+            區段1的Banner
+        </div>
+        <div class="content">
+            <h2>這是區段1</h2>
+            <p>“The woods are lovely, dark and deep...”</p>
+            <p>“I have waited for this opportunity for more than half a century, to repeat to you once again my vow of eternal fidelity and everlasting love.” - Gabriel Garcia Marquez</p>
+            <p>“I am yours, don’t give myself back to me.” - Rumi</p>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div id="section2" class="section">
+        <div class="section-banner">
+            區段2的Banner
+        </div>
+        <div class="content">
+            <h2>這是區段2</h2>
+            <p>“Love is composed of a single soul inhabiting two bodies.” - Aristotle</p>
+            <p>“You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.” - Dr. Seuss</p>
+            <p>“I loved you before I met you. I think I dreamed you into life.” - Brian W. Foster</p>
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div id="section3" class="section">
+        <div class="section-banner">
+            區段3的Banner
+        </div>
+        <div class="content">
+            <h2>這是區段3</h2>
+            <p>“I would rather spend one moment holding you than a lifetime knowing I never could.” - unknown</p>
+            <p>“To be your friend was all I ever wanted; to be your lover was all I ever dreamed.” - Valerie Lombardo</p>
+            <p>“You are my sun, my moon, and all my stars.” - E.E. Cummings</p>
+        </div>
+    </div>
+
+    <script>
+        // 獲取所有導覽連結
+        const navbarLinks = document.querySelectorAll('.navbar a');
+        const banner = document.querySelector('.banner');
+        const navbar = document.querySelector('.navbar');
+
+        // 為每個導覽連結添加事件監聽器
+        navbarLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // 防止默認行為
+
+                const targetId = this.getAttribute('href'); // 獲取目標ID
+                const targetElement = document.querySelector(targetId); // 獲取目標元素
+
+                // 滾動到目標元素
+                targetElement.scrollIntoView({
+                    behavior: 'smooth' // 設置滾動效果為平滑
+                });
+
+                // 根據點擊的區段來控制主Banner和導覽列
+                if (targetId === '#section1') {
+                    banner.style.top = '-100px'; // 隱藏Banner
+                    navbar.style.top = '0'; // 將導覽列固定在頂部
+                } else if (targetId === '#section2' || targetId === '#section3') {
+                    banner.style.top = '-100px'; // 隱藏Banner
+                    navbar.style.top = '0'; // 將導覽列固定在頂部
+                } else if (targetId === '#section1') {
+                    banner.style.top = '0'; // 讓Banner重新顯示
+                    navbar.style.top = '100px'; // 讓導覽列保持在Banner下方
+                }
+            });
+        });
+
+        // 將首頁連結的行為修改為顯示Banner
+        document.querySelector('.navbar a[href="#section1"]').addEventListener('click', function() {
+            banner.style.top = '0'; // 讓Banner顯示
+            navbar.style.top = '100px'; // 將導覽列放在Banner下方
+        });
+    </script>
+
+</body>
+</html>
