@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 1014 position sticky</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<style>
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .sticky-title {
+    position: sticky;
+    top: 20px; 
+    z-index: 10; 
+    font-family: 'Playfair Display', serif; /
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px 20px;
+    color: white; 
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .banner {
+    height: 100vh;
+    background-image: url('https://cw-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fopinion-cms-cwg-tw%2Farticle%2F202302%2Farticle-63e9e5e5a5db5.jpg/?w=900&format=webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .section {
+    height: 100vh; 
+    background-attachment: fixed; 
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(-50%, -50%) translateY(0); 
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-10px); 
+    }
+  }
+
+  
+  .bg-1 {
+    background-image: url('https://www.twreporter.org/images/20240123150024-585c6c4307944bdf2510d9f7e49623ea-desktop.jpg');
+  }
+
+  .bg-2 {
+    background-image: url('https://www.twreporter.org/images/20240123115133-5011533237e9e19b25dd0e5ea021392a-desktop.jpg');
+  }
+</style>
+
+
+<div class="banner">
+  <div class="overlay"></div>
+  <h1 class="sticky-title">
+    孤獨之聲
+    <br>
+    <span style="font-size: 18px; font-family: Arial, sans-serif; color: white;">那些無家者難以說出的秘密</span>
+  </h1>
+</div>
+
+<div class="row" style="height:400vh">
+  <div class="col-sm-6 sticky-top bg" style="height:100vh; background-image:url('https://cw-image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fopinion-cms-cwg-tw%2Fckeditor%2F202302%2Fckeditor-63e9e53b8591f.jpg/?w=900&format=webp'); background-size: cover; background-position: center;"></div>
+  
+  <div class="col-sm-6 d-flex flex-column justify-content-center" style="background-color: black; color: white; font-family: 'Merriweather', serif;">
+    <h1 style="font-family: 'Playfair Display', serif;">無家者</h1>  
+    <p style="font-family: Arial, sans-serif;">「無家者」一詞由2010年後成立的數個民間組織推廣使用，其定義包括了 法令上的遊民、居住於收容單位，以及居住於不安全或不適當之住所者 （許哲韡，2019）。 臺灣無家者的問題被認為並不嚴重，無家者人口占 比相較歐美地區來的低，但若比較文化與經濟發展軌跡類似的東亞國家，臺灣則明顯高出不少。——by臺灣無家者的污名《針對其日常生活實踐戰術的分析》</p>
+  </div>
+</div>
+
+<div style="height:300vh">
+  <div class="sticky-top bg" style="height:100vh; z-index:-1; background-image:url('https://www.twreporter.org/images/20211215205338-82e36cc303b42f47fb6ce4d38db2cb0e-desktop.jpg'); background-size: cover; background-position: center;"></div>
+  <div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6 d-flex flex-column justify-content-center" style="background-color: rgba(0, 0, 0, 0.5);"> 
+      <h1 style="font-family: 'Playfair Display', serif; color: white; font-weight: bold;">無家者所背負的污名</h1> 
+      <p style="font-family: 'Merriweather', serif; color: white;">「都不知道多久沒洗澡了，好噁心」、「好手好腳不去工作才會變成街友啊」、「給他們錢也只會拿去買菸跟買酒吧？」</p>
+      <p style="font-family: 'Merriweather', serif; color: white;">這些都是街友常被貼上的標籤，當然其中也有真實存在的事實。然而，許多時候我們看見了無家者表現出的「現象」，卻甚少去探究這些事實背後的「原因」。</p>
+      <p style="font-family: 'Merriweather', serif; color: white;">芒草心協會社工師李佳庭於《你不伸手，他會在這裡躺多久？》書中指出，不同於大眾常有的刻板印象，7成以上的街友是有工作的。只是他們所能從事的多是舉牌、陣頭等較為不穩定的臨時工，且收入仍不足以負擔高額的房租，即使付得起租金，多數的房東根本就不願意將房子承租給工作不穩定的無家者們。</p>
+      <p style="font-family: 'Merriweather', serif; color: white;">by ——看見社會的背光處：那些無家者背負的標籤</p>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="height:300vh">
+  <div class="col-sm-6 sticky-top bg" style="height:100vh; background-image:url('https://www.twreporter.org/images/20240123115133-5011533237e9e19b25dd0e5ea021392a-desktop.jpg'); background-size: cover; background-position: center center;"></div> 
+  <div class="col-sm-6 d-flex flex-column justify-content-center" style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; color: white;"> 
+    <h1 style="font-family: 'Playfair Display', serif; font-weight: bold;">無家者的小故事</h1> 
+    <p style="font-family: 'Merriweather', serif; line-height: 1.6;">
+      阿強年約50歲，是個天真爛漫的大叔，與一堆絨毛娃娃為伴。我道明來意，說自己是攝影記者，想跟他聊天、拍照。他反問：「我跟你說的話，有人想知道嗎？」我告訴他，無家者的故事值得被聽見。這讓他漸漸放下戒心，告訴我自己有幾隻絨毛娃娃，還有幾件衣服，其他的都已經賣掉了。
+    </p>
+    <p style="font-family: 'Merriweather', serif; line-height: 1.6;">
+      若問無家者為何不回家，意思就像是「何不食肉糜」吧，阿強不曾提及家中狀況，北車就是他的居室，也總是在北車關閉前提早離開。為何不多待一陣？他說：「被人趕走很難受的。」
+    </p>
+    <p style="font-family: 'Merriweather', serif; line-height: 1.6;">
+      除了絨毛娃娃，阿強還有另一夥伴──阿陳。阿陳曾中風，行動不便，日常生活需靠阿強照顧──上下床、坐輪椅、上廁所，阿強其實是個無微不至的長照人員。他有時會去廟會巡遊打工，賺到錢就買阿陳喜歡的食物。
+    </p>
+    <p style="font-family: 'Merriweather', serif; line-height: 1.6;">
+      他們的關係是相濡以沬？或是阿強是個單向的照顧者？阿陳總是沉默。
+    </p>
+  </div>
+</div>
+
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .bg-1 {
+    background-image: url('https://www.twreporter.org/images/20240123150024-585c6c4307944bdf2510d9f7e49623ea-desktop.jpg');
+    background-size: cover;
+    background-position: center; 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+  }
+
+  .bg-2 {
+    background-image: url('https://www.twreporter.org/images/20240123150024-585c6c4307944bdf2510d9f7e49623ea-desktop.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative;  
+  }
+
+  .section {
+    height: 100vh; 
+    background-color: black; 
+  }
+
+  .sticky-title {
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: white; 
+    text-align: center; 
+    animation: float 3s ease-in-out infinite; 
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0); 
+    }
+    50% {
+      transform: translateY(-10px); 
+    }
+  }
+</style>
+    <div class="col-sm-12 section bg-2">
+      <p class="sticky-title">那些我們不曾問過的故事，<br>你，<br>真的了解過無家者嗎？</p>
+    </div>
+  </div>
+</div>
+
+<div style="height: 20vh; background-color: black; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px;">
+    HW3 社工四金林耘瑄
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+</body>
+</html>
