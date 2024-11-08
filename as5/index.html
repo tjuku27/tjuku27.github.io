@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>AS5 Scrolled-Video</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Screen Video Scroll Control</title>
+  <style>
+    /* General styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Leading Section */
+    .leading-section {
+      height: 200vh;
+      background-color: lightgrey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Video section styling */
+    .video-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Full-screen video */
+    .video-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Middle Section */
+    .middle-section {
+      height: 200vh;
+      background-color: lightcoral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Ending Section */
+    .ending-section {
+      height: 50vh;
+      background-color: lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Leading Section -->
+  <div class="leading-section">
+    <h1>The forest</h1>
+  </div>
+
+  <!-- First Video Section -->
+  <div class="video-section">
+    <video id="video1" src="https://web.cw.com.tw/climate-2020/landing/cover-mobile.mp4" muted></video>
+  </div>
+
+  <!-- Middle Section -->
+  <div class="middle-section">
+    <h1>What did you see?</h1>
+  </div>
+
+  <!-- Second Video Section -->
+  <div class="video-section">
+    <video id="video2" src="https://web.cw.com.tw/climate-2020/landing/cover-mobile.mp4" muted></video>
+  </div>
+
+  <!-- Ending Section -->
+  <div class="ending-section">
+    <h1>The end</h1>
+  </div>
+
+  <script>
+    const video1 = document.getElementById('video1');
+    const video2 = document.getElementById('video2');
+    const middleSection = document.querySelector('.middle-section');
+    const endingSection = document.querySelector('.ending-section');
+    let video1Played = false;
+    let video2Played = false;
+
+    window.addEventListener('scroll', () => {
+      const video1Top = video1.getBoundingClientRect().top;
+      const video1Bottom = video1.getBoundingClientRect().bottom;
+      const video2Top = video2.getBoundingClientRect().top;
+      const middleSectionTop = middleSection.getBoundingClientRect().top;
+      const endingSectionTop = endingSection.getBoundingClientRect().top;
+
+      // 控制第一個影片的播放和停止
+      if (video1Top <= window.innerHeight && video1Bottom > 0 && middleSectionTop > window.innerHeight) {
+        if (!video1Played) {
+          video1.play();
+          video1Played = true;
+        }
+      } else if (middleSectionTop <= window.innerHeight) {
+        // 當 Middle Section 進入視窗時，停止並完成播放第一段影片
+        video1.pause();
+        video1.currentTime = video1.duration; // 設置影片到結尾
+      }
+
+      // 控制第二個影片的播放
+      if (video2Top <= window.innerHeight && video2Top > 0 && !video2Played && endingSectionTop > window.innerHeight) {
+        video2.play();
+        video2Played = true;
+      } else if (endingSectionTop <= window.innerHeight) {
+        // 當 Ending Section 進入螢幕時停止第二個影片
+        video2.pause();
+        video2.currentTime = 0;
+      }
+    });
+  </script>
+
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+</body>
+</html>
