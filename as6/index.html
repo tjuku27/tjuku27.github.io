@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>AS6</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷史上的今天</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap'); /* 手寫字體 */
+
+        body {
+            margin: 0;
+            font-family: 'Patrick Hand', cursive; /* 使用手寫字體 */
+            background-color: #f7f4e9;
+            color: #4e3b31;
+        }
+
+        .banner {
+            background-color: #a67c52;
+            color: #fff;
+            text-align: center;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            width: 80%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-image: url('https://example.com/history-bg.png'); /* 替換為實際的背景圖 URL */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: #a67c52;
+            transform: translateX(-50%);
+        }
+
+        .event {
+            position: relative;
+            width: 40%;
+            padding: 15px;
+            background: #fff;
+            border: 2px solid #d3c5a5;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            margin-bottom: 50px; /* 每個事件之間的距離 */
+        }
+
+        .event.left {
+            margin-left: 5%;
+            text-align: right;
+        }
+
+        .event.right {
+            margin-left: auto;
+            margin-right: 5%;
+            text-align: left;
+        }
+
+        .event.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .event p {
+            margin: 5px 0;
+        }
+
+        .event p:first-child, .event p:nth-child(2) {
+            font-weight: bold; /* 日期和事件名稱加粗 */
+            font-size: 1.2rem; /* 字體比內容稍大 */
+        }
+
+        .event p:nth-child(3) {
+            font-size: 1rem;
+        }
+
+        .final {
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: #d3c5a5;
+            color: #4e3b31;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>歷史上的今天</h1>
+        <p>近五十年臺灣大事</p>
+    </div>
+    <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- 歷史事件 -->
+        <div class="event left">
+            <p>1975/04/05</p>
+            <p>蔣中正逝世</p>
+            <p>蔣中正，作為台灣戒嚴時期的重要領袖，其逝世標誌著台灣政治體制轉型的起點。</p>
+        </div>
+        <div class="event right">
+            <p>1987/07/15</p>
+            <p>解嚴</p>
+            <p>台灣結束長達 38 年的戒嚴時期，象徵社會自由化與民主化的開始。</p>
+        </div>
+        <div class="event left">
+            <p>1991/05/01</p>
+            <p>國民大會終止動員戡亂</p>
+            <p>解除戒嚴後的另一里程碑，結束動員戡亂時期，恢復正常憲政秩序。</p>
+        </div>
+        <div class="event right">
+            <p>1996/03/23</p>
+            <p>首次總統直選</p>
+            <p>李登輝成為台灣首位民選總統，象徵民主進程的重要突破。</p>
+        </div>
+        <div class="event left">
+            <p>1999/09/21</p>
+            <p>九二一地震</p>
+            <p>造成台灣重大損失的地震事件，促使防災意識提升和建築法規改進。</p>
+        </div>
+        <div class="event right">
+            <p>2000/03/18</p>
+            <p>首次政黨輪替</p>
+            <p>民進黨陳水扁當選總統，國民黨首次失去執政地位。</p>
+        </div>
+        <div class="event left">
+            <p>2008/08/08</p>
+            <p>莫拉克風災</p>
+            <p>莫拉克颱風帶來重大災害，特別是小林村滅村事件，促使台灣更重視災防體系。</p>
+        </div>
+        <div class="event right">
+            <p>2014/03/18</p>
+            <p>太陽花學運</p>
+            <p>一場由青年主導的社會運動，反對《服貿協議》，呼籲更多公共參與與透明化。</p>
+        </div>
+        <div class="event left">
+            <p>2016/01/16</p>
+            <p>女性總統當選</p>
+            <p>蔡英文當選成為台灣第一位女性總統，象徵性別平權的新里程碑。</p>
+        </div>
+        <div class="event right">
+            <p>2017/05/24</p>
+            <p>同性婚姻合法化裁定</p>
+            <p>大法官釋憲通過同性婚姻合法化，台灣成為亞洲首例。</p>
+        </div>
+        <div class="event left">
+            <p>2021/06/30</p>
+            <p>COVID-19疫苗全面施打</p>
+            <p>台灣展開疫苗普及化施打，對抗新冠疫情，保護全民健康。</p>
+        </div>
+        <div class="event right">
+            <p>2023/10/10</p>
+            <p>半導體產業全球領先</p>
+            <p>台灣在半導體領域的突破，使其成為全球供應鏈的關鍵樞紐。</p>
+        </div>
+    </div>
+    <div class="final">
+        歷史讓我們更瞭解未來。
+    </div>
+
+    <script>
+        const events = document.querySelectorAll('.event');
+
+        window.addEventListener('scroll', () => {
+            events.forEach(event => {
+                const rect = event.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    event.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+</body>
+</html>
