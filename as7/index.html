@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>As7</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消失的雨林</title>
+    <style>
+        /* 基本樣式 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .leading {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #006400, #228B22);
+            color: white;
+            font-size: 36px;
+        }
+
+        .div1, .div4 {
+            height: 800px;  /* 調整高度為 800px */
+            position: relative;
+            background: #87CEEB; /* 初始天空藍 */
+            overflow: hidden;
+            transition: background-color 0.3s ease; /* 添加過渡效果 */
+        }
+
+        .div3, .div5 {
+            height: 200px;
+            background: black;
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 50%; /* 樹木上移 */
+            height: 150px;
+            opacity: 1;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+
+        /* 樹木分佈 */
+        .tree:nth-child(1) { left: 5%; }
+        .tree:nth-child(2) { left: 15%; }
+        .tree:nth-child(3) { left: 25%; }
+        .tree:nth-child(4) { left: 35%; }
+        .tree:nth-child(5) { left: 45%; }
+        .tree:nth-child(6) { left: 55%; }
+        .tree:nth-child(7) { left: 65%; }
+        .tree:nth-child(8) { left: 75%; }
+        .tree:nth-child(9) { left: 85%; }
+        .tree:nth-child(10) { left: 95%; }
+
+        /* 文字內容樣式 */
+        .content {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+            width: 90%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Leading Section -->
+    <div class="section leading">
+        <h1>消失的雨林</h1>
+    </div>
+
+    <!-- Div1 Section -->
+    <div class="section div1" id="div1">
+        <!-- 樹木圖片 -->
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        
+        <div class="content">
+            <p><strong>全球雨林消失的原因：</strong></p>
+            <p>全球雨林正在以驚人的速度消失，主要原因是非法伐木、農業擴展、都市化以及氣候變遷等因素。每年，大量的樹木被砍伐，破壞了雨林的生物多樣性，並加劇了全球暖化的問題。這些雨林是地球吸收二氧化碳、調節氣候的重要機制，一旦消失，對環境和生物將帶來長遠且難以恢復的影響。</p>
+        </div>
+    </div>
+
+    <!-- Div3 Section -->
+    <div class="section div3"></div>
+
+    <!-- Div4 Section -->
+    <div class="section div4" id="div4">
+        <!-- 樹木圖片 -->
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+        <img src="https://png.pngtree.com/png-vector/20240901/ourmid/pngtree-majestic-tree-in-tropical-rainforest-png-image_13710584.png" class="tree" alt="Tree">
+
+        <div class="content">
+            <p><strong>避免雨林消失的措施：</strong></p>
+            <p>為了避免雨林繼續消失，大家可以採取一系列行動。首先，我們可以選擇支持永續林業的產品，避免購買來自非法伐木的木材與紙製品。其次，支持保護雨林的組織與政府，並參與植樹活動，為地球增添更多綠意。此外，減少個人碳足跡、選擇環保的生活方式，對全球氣候變遷做出貢獻，也是保護雨林的重要措施。</p>
+        </div>
+    </div>
+
+    <!-- Div5 Section -->
+    <div class="section div5"></div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const scrollPosition = window.scrollY;
+
+            // 樹木在 div1 中逐一消失
+            const treesDiv1 = document.querySelectorAll("#div1 .tree");
+            treesDiv1.forEach((tree, index) => {
+                const depth = index + 1;
+                const disappearThreshold = depth * 100;
+                tree.style.opacity = scrollPosition > disappearThreshold ? 0 : 1;
+                tree.style.transform = scrollPosition > disappearThreshold ? "translateY(-50px)" : "translateY(0)";
+            });
+
+            // 樹木在 div4 中逐一出現
+            const treesDiv4 = document.querySelectorAll("#div4 .tree");
+            treesDiv4.forEach((tree, index) => {
+                const depth = index + 1;
+                const appearThreshold = 800 + depth * 100; // 調整出現的時間點
+                tree.style.opacity = scrollPosition > appearThreshold ? 1 : 0;
+                tree.style.transform = scrollPosition > appearThreshold ? "translateY(0)" : "translateY(50px)";
+            });
+
+            // 背景顏色變化
+            const div1 = document.getElementById("div1");
+            const div4 = document.getElementById("div4");
+            const dayToNightRatio = Math.min(scrollPosition / 800, 1);
+
+            // div1 天空顏色從白天變為晚上
+            div1.style.backgroundColor = `rgb(${Math.min(135 + 120 * dayToNightRatio, 255)}, ${Math.min(206 + 50 * dayToNightRatio, 255)}, ${Math.min(235 + 50 * dayToNightRatio, 255)})`;
+
+            // div4 背景顏色從白天變為晚上
+            div4.style.backgroundColor = `rgb(${Math.min(135 + 120 * (1 - dayToNightRatio), 255)}, ${Math.min(206 + 50 * (1 - dayToNightRatio), 255)}, ${Math.min(235 + 50 * (1 - dayToNightRatio), 255)})`;
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+</body>
+</html>
